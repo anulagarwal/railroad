@@ -39,15 +39,13 @@ public class PlayerMovementHandler : MonoBehaviour
     {
         movementJS = UIManager.Instance.GetMovementJS;
         playerMovementType = PlayerMovementType.Running;
-        characterAnimationHandler = PlayerSingleton.Instance.GetCharacterAnimationHandler;
+//        characterAnimationHandler = PlayerSingleton.Instance.GetCharacterAnimationHandler;
 
      
     }
 
     private void Update()
     {
-        GravityMechanism();
-
         if (!ForceStop)
         {
             movementDirection = new Vector3(movementJS.Horizontal, 0, movementJS.Vertical).normalized;
@@ -76,21 +74,6 @@ public class PlayerMovementHandler : MonoBehaviour
     }
     #endregion
 
-    #region Private Core Functions
-    private void GravityMechanism()
-    {
-        isGrounded = Physics.Raycast(groundCheckTrans.position, groundCheckTrans.up, groundDistance, groundCheckLayerMask);
-
-
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
-
-        velocity.y += gravityInfluence * Time.deltaTime;
-        characterController.Move(velocity * Time.deltaTime);
-    }
-    #endregion
 
     #region Public Core Functions
 
