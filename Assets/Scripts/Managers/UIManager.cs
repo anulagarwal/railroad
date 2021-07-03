@@ -32,6 +32,10 @@ public class UIManager : MonoBehaviour
 
 
 
+    [Header("Text values")]
+    [SerializeField] private Text gemCount;
+    [SerializeField] private Text coinCount;
+    [SerializeField] private Text xpLevel;
 
 
     [Header("Gameplay UI Panel")]
@@ -86,6 +90,24 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Text updates
+
+    public void UpdateGemCount(int value)
+    {
+        gemCount.text = "" + value;
+    }
+
+    public void UpdateCoinCount(int value)
+    {
+        coinCount.text = "" + value;
+    }
+
+    public void UpdateXP(int value)
+    {
+        xpLevel.text = "" + value;
+    }
     #endregion
 
     #region Getter And Setter

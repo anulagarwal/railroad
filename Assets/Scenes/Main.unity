@@ -221,6 +221,9 @@ MonoBehaviour:
   gameLoseUIObj: {fileID: 0}
   storeUIObj: {fileID: 0}
   paywallObj: {fileID: 0}
+  gemCount: {fileID: 0}
+  coinCount: {fileID: 0}
+  xpLevel: {fileID: 0}
   movementJS: {fileID: 320951400}
 --- !u!114 &385703859
 MonoBehaviour:

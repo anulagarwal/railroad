@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Station : MonoBehaviour
 {
+    [Header ("System Attributes")]
     [SerializeField] private int coinsRequiredToBuild;
     [SerializeField] private int gemsRequiredToBuild;
-    
+    [SerializeField] private int stationLevel;
+    [SerializeField] private bool isBuilt;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,4 +20,10 @@ public class Station : MonoBehaviour
     {
         
     }
+
+    #region Public functions
+
+
+
+    #endregion
 }
