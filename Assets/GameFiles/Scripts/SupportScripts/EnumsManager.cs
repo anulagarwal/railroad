@@ -2,6 +2,6 @@ public enum PlayerAnimationState
 {
     Idle,
     Run,
-    SwimgAxe,
+    SwingAxe,
     Victory
 };

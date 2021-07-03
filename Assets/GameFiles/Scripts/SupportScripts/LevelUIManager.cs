@@ -8,7 +8,7 @@ public class LevelUIManager : MonoBehaviour
     public static LevelUIManager Instance = null;
 
     [Header("Gameplay UI Panel Setup")]
-    [SerializeField] private VariableJoystick movementJS = null;
+    [SerializeField] private FloatingJoystick movementJS = null;
     #endregion
 
     #region MonoBehaviour Functions
@@ -23,6 +23,6 @@ public class LevelUIManager : MonoBehaviour
     #endregion
 
     #region Getter And Setter
-    public VariableJoystick GetMovementJS { get => movementJS; }
+    public FloatingJoystick GetMovementJS { get => movementJS; }
     #endregion
 }

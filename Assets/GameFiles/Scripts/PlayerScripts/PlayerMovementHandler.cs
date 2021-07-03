@@ -13,7 +13,7 @@ public class PlayerMovementHandler : MonoBehaviour
     [SerializeField] private CharacterController characterController = null;
 
     private Vector3 movementDirection = Vector3.zero;
-    private VariableJoystick movementJS = null;
+    private FloatingJoystick movementJS = null;
     private PlayerAnimationsHandler playerAnimationsHandler = null;
     #endregion
 
@@ -49,7 +49,7 @@ public class PlayerMovementHandler : MonoBehaviour
     #region Private Core Functions
     private void Movement()
     {
-        if (PlayerState != PlayerAnimationState.SwimgAxe)
+        if (PlayerState != PlayerAnimationState.SwingAxe)
         {
             movementDirection = new Vector3(movementJS.Horizontal, 0, movementJS.Vertical).normalized;
             if (movementDirection != Vector3.zero)

@@ -34,7 +34,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
                 animator.SetBool("b_Run", true);
                 animator.SetBool("b_Swing", false);
                 break;
-            case PlayerAnimationState.SwimgAxe:
+            case PlayerAnimationState.SwingAxe:
                 animator.SetBool("b_Swing", true);
                 break;
             case PlayerAnimationState.Victory:
