@@ -43,7 +43,7 @@ public class PlayerMovementHandler : MonoBehaviour
     #endregion
 
     #region Getter And Setter
-    public PlayerAnimationState PlayerState { get; set; }
+   [SerializeField] public PlayerAnimationState PlayerState { get; set; }
     #endregion
 
     #region Private Core Functions

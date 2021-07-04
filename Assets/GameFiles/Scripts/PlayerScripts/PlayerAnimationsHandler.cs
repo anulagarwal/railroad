@@ -20,6 +20,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
         PlayerSingleton.Instance.GetPlayerMovementHandler.PlayerState = PlayerAnimationState.Idle;
         LevelUIManager.Instance.SpawnScore(transform.position);
         GemManager.Instance.AddGems(1);
+        SwitchAnimationState(PlayerAnimationState.Idle);
     }
     #endregion
 
