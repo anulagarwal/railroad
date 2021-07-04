@@ -43,6 +43,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643fccdac82a7ee4199948665c86abc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
+  mainMenuUIObj: {fileID: 0}
+  gameplayUIObj: {fileID: 0}
+  gameWinUIObj: {fileID: 0}
+  gameLoseUIObj: {fileID: 0}
+  scoreText: {fileID: 3015249161566731639, guid: 9958bba7bd3da481dab2b91d95697a24,
+    type: 3}
+  gemCount: {fileID: 8973497588520161636}
+  coinCount: {fileID: 0}
+  xpLevel: {fileID: 0}
   movementJS: {fileID: 3683658377830992013}
 --- !u!1 &6256924089932221092
 GameObject:

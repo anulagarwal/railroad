@@ -18,6 +18,8 @@ public class PlayerAnimationsHandler : MonoBehaviour
     {
         TreeToBeCutted.DisableAllTree();
         PlayerSingleton.Instance.GetPlayerMovementHandler.PlayerState = PlayerAnimationState.Idle;
+        LevelUIManager.Instance.SpawnScore(transform.position);
+        GemManager.Instance.AddGems(1);
     }
     #endregion
 

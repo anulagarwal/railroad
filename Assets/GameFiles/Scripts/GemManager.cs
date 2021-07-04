@@ -25,7 +25,7 @@ public class GemManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentGemCount = 50;
     }
 
 
@@ -37,16 +37,21 @@ public class GemManager : MonoBehaviour
     public void ReduceGems(int value)
     {
         currentGemCount -= value;
+        LevelUIManager.Instance.UpdateGemCount(currentGemCount);
+
     }
 
     public void AddGems(int value)
     {
         currentGemCount += value;
+        LevelUIManager.Instance.UpdateGemCount(currentGemCount);
     }
 
     public void SetGems(int value)
     {
         currentGemCount = value;
+        LevelUIManager.Instance.UpdateGemCount(currentGemCount);
+
     }
 
     #endregion
