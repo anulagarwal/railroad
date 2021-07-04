@@ -12,7 +12,10 @@ public class RailwayCart : MonoBehaviour
 
     [Header("Cart attributes")]
     [SerializeField] private bool isPlayerRiding;
+    [SerializeField] private float waitTimeStation;
 
+    private Transform currentRailRoad;
+    private bool reachedStation;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,18 @@ public class RailwayCart : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Station")
+        {
+
+        }
+
+        if (collision.gameObject.tag == "RailRoad")
+        {
+
+        }
+    }
 
     #region Public functions
 

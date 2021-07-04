@@ -4,4 +4,10 @@ public enum PlayerAnimationState
     Run,
     SwingAxe,
     Victory
+}
+
+public enum CartState
+{
+    WaitingAtStation,
+    Moving
 };

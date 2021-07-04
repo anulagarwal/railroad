@@ -14,6 +14,12 @@ public class PlayerTriggerEventsHandler : MonoBehaviour
             PlayerSingleton.Instance.GetPlayerAnimationsHandler.SwitchAnimationState(PlayerAnimationState.SwingAxe);
             PlayerSingleton.Instance.GetPlayerAnimationsHandler.TreeToBeCutted = other.gameObject.transform.parent.transform.GetComponent<TreesHandler>();
         }
+
+        if(other.gameObject.tag == "RailRoad")
+        {
+            RailRoadHandler rrh = other.gameObject.GetComponent<RailRoadHandler>();
+            rrh.EnableTrack();
+        }
     }
     #endregion
 }
