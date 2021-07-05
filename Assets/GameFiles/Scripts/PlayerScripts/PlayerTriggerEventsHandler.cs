@@ -9,10 +9,10 @@ public class PlayerTriggerEventsHandler : MonoBehaviour
     {
         if (other.gameObject.tag == "Tree" && PlayerSingleton.Instance.GetPlayerMovementHandler.PlayerState != PlayerAnimationState.SwingAxe)
         {
-            print(PlayerSingleton.Instance.GetPlayerMovementHandler.PlayerState);
+            print("Isnide");
             PlayerSingleton.Instance.GetPlayerMovementHandler.PlayerState = PlayerAnimationState.SwingAxe;
             PlayerSingleton.Instance.GetPlayerAnimationsHandler.SwitchAnimationState(PlayerAnimationState.SwingAxe);
-            PlayerSingleton.Instance.GetPlayerAnimationsHandler.TreeToBeCutted = other.gameObject.transform.parent.transform.GetComponent<TreesHandler>();
+            PlayerSingleton.Instance.GetPlayerAnimationsHandler.TreeToBeCutted = other.gameObject.transform.parent.transform.parent.transform.GetComponent<TreesHandler>();
         }
 
         if(other.gameObject.tag == "RailRoad")
