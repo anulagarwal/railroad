@@ -11,6 +11,7 @@ public class TreesHandler : MonoBehaviour
     [Header("Components Reference")]
     [SerializeField] private Animator animator = null;
     [SerializeField] private ParticleSystem treeBurstPS = null;
+    [SerializeField] private GameObject woodLogsObj = null;
     [SerializeField] private List<GameObject> treeMeshObjs = new List<GameObject>();
     #endregion
 
@@ -34,7 +35,8 @@ public class TreesHandler : MonoBehaviour
     public void DisableAllTree()
     {
         treeBurstPS.Play();
-        animator.SetTrigger("t_ScaleDown"); 
+        animator.SetTrigger("t_ScaleDown");
+        woodLogsObj.SetActive(true);
     }
 
     public void DisableAllTreeMeshes()

@@ -7,10 +7,13 @@ public class PlayerAnimationsHandler : MonoBehaviour
     #region Properties
     [Header("Components Reference")]
     [SerializeField] private Animator animator = null;
+    [SerializeField] private ParticleSystem sparkPS = null;
     #endregion
 
     #region Getter And Setter
     public TreesHandler TreeToBeCutted { get; set; }
+
+    public Animator GetAnimator { get => animator; }
     #endregion
 
     #region Animation Events Functions
@@ -21,6 +24,11 @@ public class PlayerAnimationsHandler : MonoBehaviour
         LevelUIManager.Instance.SpawnScore(transform.position);
         GemManager.Instance.AddGems(1);
         SwitchAnimationState(PlayerAnimationState.Idle);
+    }
+
+    private void AnimEvent_Mining()
+    {
+        sparkPS.Play();
     }
     #endregion
 
@@ -39,6 +47,9 @@ public class PlayerAnimationsHandler : MonoBehaviour
                 break;
             case PlayerAnimationState.SwingAxe:
                 animator.SetBool("b_Swing", true);
+                break;
+            case PlayerAnimationState.Mining:
+                animator.SetBool("b_Mining", true);
                 break;
             case PlayerAnimationState.Victory:
                 animator.SetTrigger("t_Victory");

@@ -3,6 +3,7 @@ public enum PlayerAnimationState
     Idle,
     Run,
     SwingAxe,
+    Mining,
     Victory
 }
 

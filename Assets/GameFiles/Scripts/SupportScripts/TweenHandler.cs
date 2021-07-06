@@ -11,6 +11,10 @@ public class TweenHandler : MonoBehaviour
     #endregion
 
     #region MonoBehaviour Functions
+    private void Start()
+    {
+        Tween();
+    }
     #endregion
 
     #region Public Core Functions
